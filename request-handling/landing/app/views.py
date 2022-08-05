@@ -27,7 +27,6 @@ def landing(request):
     if request.GET.get("ab-test-arg") == "test":
         counter_show["test"] += 1
         return render(request, 'landing_alternate.html')
-    # elif request.GET.get("ab-test-arg") == "original":
     counter_show["original"] += 1
     return render(request, 'landing.html')
 
